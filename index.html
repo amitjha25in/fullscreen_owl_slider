@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+
+</head>
+
+<body>
+  <!-- you can add image according to you requirements-->
+  <div class="fullScreen_slider">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <h1>Item 1</h1>
+      </div>
+      <div class="item">
+        <h1>Item 2</h1>
+      </div>
+      <div class="item">
+        <h1>Item 3</h1>
+      </div>
+      <div class="item">
+        <h1>Item 4</h1>
+      </div>
+      <div class="item">
+        <h1>Item 5</h1>
+      </div>
+      <div class="item">
+        <h1>Item 6</h1>
+      </div>
+    </div>
+    <div class="custome_nav">
+      <div class="next_"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+      <div class="prev_"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      let owl = $(".owl-carousel");
+      owl.owlCarousel({
+        items: 1,
+        //margin:10,
+        loop: true,
+        nav: false,
+        dots: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+            nav: false,
+          }
+        }
+      })
+      $(".next_").click(function () {
+        owl.trigger("next.owl");
+      })
+      $(".prev_").click(function () {
+        owl.trigger("prev.owl");
+      })
+    })
+  </script>
+</body>
+
+</html>
